@@ -1,13 +1,3 @@
-# National Digital Platform for Land Governance (SIH 26019)
-
-> **Problem Statement ID:** SIH 26019  
-> **Title:** National Digital Platform for Research, Policy Innovation, and Evidence-Based Land Governance  
-> **Ministry:** Ministry of Rural Development  
-> **Department:** Department of Land Resources (DoLR)  
-> **Theme:** Smart Automation (Software)  
-
----
-
 ## 🏛️ Platform Architecture & Unified Feature Suite
 
 `LandGov-Platform` is an AI-powered national digital ecosystem combining geospatial intelligence, legal knowledge graphs, econometric policy simulations, and multi-modal citizen interfaces into a single unified dashboard.
