@@ -1,31 +1,29 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { AuthProvider } from "@/contexts/AuthContext";
-import Navbar from "@/components/layout/Navbar";
-import Sidebar from "@/components/layout/Sidebar";
+import type { Metadata } from 'next';
+import './globals.css';
+import { AppShell } from '../components/layout/app-shell';
 
 export const metadata: Metadata = {
-  title: "National Digital Platform for Land Governance | SIH 26019",
-  description: "Ministry of Rural Development & Department of Land Resources (DoLR) Evidence-Based Land Governance Platform",
+  title: 'National Digital Land Governance & Research Platform',
+  description: 'AI-Powered Spatial Studio and Land Title Guarantee Analytics Sandbox',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className="dark">
-      <body className="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col">
-        <AuthProvider>
-          <Navbar />
-          <div className="flex flex-1 w-full">
-            <Sidebar />
-            <main className="flex-1 p-6 overflow-y-auto max-w-[1600px] w-full mx-auto">
-              {children}
-            </main>
-          </div>
-        </AuthProvider>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );
