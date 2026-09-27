@@ -326,8 +326,8 @@ export function DelhiOSMMap({
       </div>
 
       {/* Map Element */}
-      <div className="relative flex-1 w-full h-full min-h-[480px]">
-        <div ref={mapContainerRef} className="w-full h-full" />
+      <div className="relative flex-1 w-full min-h-[480px]">
+        <div ref={mapContainerRef} className="absolute inset-0" />
 
         {/* Custom Zoom Controls Top-Left */}
         <div className="absolute top-4 left-4 z-[1000] flex flex-col gap-1 shadow-md rounded-lg overflow-hidden border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900">

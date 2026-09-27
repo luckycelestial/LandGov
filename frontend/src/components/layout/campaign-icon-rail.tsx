@@ -48,7 +48,7 @@ export function CampaignIconRail() {
     >
       <aside
         className={`absolute inset-y-0 left-0 flex flex-col items-start py-3 justify-between bg-[#0d131f] text-zinc-400 border-r border-[#1a2333] shadow-2xl select-none transition-all duration-250 ease-in-out overflow-hidden ${
-          isExpanded ? 'w-52 shadow-2xl shadow-black/40' : 'w-14'
+          isExpanded ? 'w-64 shadow-2xl shadow-black/40' : 'w-14'
         }`}
       >
         {/* Brand Logo */}
@@ -70,7 +70,7 @@ export function CampaignIconRail() {
                 <Link
                   key={idx}
                   href={item.href}
-                  title={item.label}
+                  title={isExpanded ? undefined : item.label}
                   className={`flex items-center gap-3 px-2 py-2 rounded-lg transition-all w-full min-w-0 ${
                     isActive
                       ? 'text-white bg-emerald-600/30 ring-1 ring-emerald-500/50'
@@ -80,7 +80,7 @@ export function CampaignIconRail() {
                   <Icon className="w-4 h-4 flex-shrink-0" />
                   <span
                     className={`text-xs font-medium whitespace-nowrap overflow-hidden transition-all duration-200 ${
-                      isExpanded ? 'opacity-100 max-w-[160px]' : 'opacity-0 max-w-0'
+                      isExpanded ? 'opacity-100 max-w-[180px]' : 'opacity-0 max-w-0'
                     }`}
                   >
                     {item.label}
@@ -95,7 +95,7 @@ export function CampaignIconRail() {
         <div className="flex flex-col items-start gap-1 w-full px-2.5">
           <button
             className="flex items-center gap-3 px-2 py-2 rounded-lg hover:text-zinc-100 hover:bg-zinc-800/60 transition-colors w-full"
-            title="Settings"
+            title={isExpanded ? undefined : 'Settings'}
           >
             <Settings className="w-4 h-4 flex-shrink-0" />
             <span
@@ -108,7 +108,7 @@ export function CampaignIconRail() {
           </button>
           <button
             className="flex items-center gap-3 px-2 py-2 rounded-lg hover:text-rose-400 hover:bg-zinc-800/60 transition-colors w-full"
-            title="Log out"
+            title={isExpanded ? undefined : 'Log out'}
           >
             <LogOut className="w-4 h-4 flex-shrink-0" />
             <span
