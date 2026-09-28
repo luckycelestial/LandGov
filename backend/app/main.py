@@ -16,6 +16,8 @@ from app.api.v1.endpoints.simulation import router as simulation_router
 from app.api.v1.endpoints.repository import router as repository_router
 from app.api.v1.endpoints.innovation import router as innovation_router
 from app.api.v1.endpoints.citizen import router as citizen_router
+from app.api.v1.endpoints.ingestion import router as ingestion_router
+from app.api.v1.endpoints.canonical import router as canonical_router
 
 
 @asynccontextmanager
@@ -56,6 +58,8 @@ app.include_router(simulation_router, prefix=settings.API_V1_STR)
 app.include_router(repository_router, prefix=settings.API_V1_STR)
 app.include_router(innovation_router, prefix=settings.API_V1_STR)
 app.include_router(citizen_router, prefix=settings.API_V1_STR)
+app.include_router(ingestion_router, prefix=settings.API_V1_STR)
+app.include_router(canonical_router, prefix=settings.API_V1_STR)
 
 
 @app.get("/")
